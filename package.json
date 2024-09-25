@@ -1,0 +1,21 @@
+{
+  "name": "Bank_proj",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "cd Backend && npm start",
+    "start-frontend": "cd Frontend && npm start",
+    "install-all": "npm install --prefix Backend && npm install --prefix Frontend && npm install --prefix landing",
+    "dev": "concurrently \"npm run dev-backend\" \"npm run dev-frontend\"",
+    "dev-backend": "cd Backend && npm run dev",
+    "dev-frontend": "cd Frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2"
+  }
+}
