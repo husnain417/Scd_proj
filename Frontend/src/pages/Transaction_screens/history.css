@@ -1,0 +1,64 @@
+.history {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    color: white;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.history__container {
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+    max-height: 100vh;
+    padding: 2rem;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.transactions_his {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.transaction-item-his {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.transaction-item-his p {
+    margin: 0.5rem 0;
+}
+
+.transaction-details-his p {
+    margin: 0.3rem 0;
+}
+
+strong {
+    color: #bbb;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.download-icon
+{
+    height: 20px;
+    width: 20px;
+    margin-top: 1rem;
+}
+
+.download-icon:hover
+{
+    cursor: pointer;
+}

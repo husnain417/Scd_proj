@@ -1,0 +1,70 @@
+.newpass-container
+{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    color: white;
+    padding-top: 2rem;
+    padding-left: 8rem;
+}
+
+.newpass-content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 50%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-left: 4rem; 
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    padding-right: 8rem !important  ;
+    border-top: 5px solid rgb(51, 187, 207);
+    border-bottom: 5px solid rgb(51, 187, 207);
+  }
+     
+  .sidepic-image {
+    width: 100%; 
+    z-index: 10;
+  }
+  
+
+  .header
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .reset-btn
+  {
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    max-width: 65%;
+    background-color: rgb(51, 187, 207);
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .reset-btn:hover  {
+    background-color: rgb(51, 187, 207, 0.7);
+  }
+
+
+  .otps
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items:start;
+  }

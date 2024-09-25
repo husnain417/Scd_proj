@@ -1,0 +1,22 @@
+/* InputWithIcon.css */
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

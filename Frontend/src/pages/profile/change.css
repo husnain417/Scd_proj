@@ -1,0 +1,76 @@
+.changepass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .changepass__container {
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .h2_change {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .changepass__form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .changepass__item {
+    margin-bottom: 20px;
+  }
+  
+  .changepass__item label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  
+  .changepass__item input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .changepass__button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .changepass__button:hover {
+    background-color: #007bff50;
+  }
+  
+  /* Success and error messages */
+  .success_message {
+    color: #28a745;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .error_message {
+    color: #dc3545;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  

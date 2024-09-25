@@ -1,0 +1,84 @@
+.bank__emailver {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    color: white;
+    padding-top: 2rem;
+    padding-left: 8rem;
+  }
+
+  .bank__emailver-content
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 45%;
+    align-items: center;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-left: 4rem; 
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    padding-right: 8rem !important  ;
+    border-top: 5px solid rgb(51, 187, 207);
+    border-bottom: 5px solid rgb(51, 187, 207);
+
+  }
+     
+  .sidepic-image {
+    width: 100%; 
+    z-index: 10;
+  }
+  
+
+  .header_email
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .verify-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(51, 187, 207);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .verify-btn:hover {
+    background-color: rgb(51, 187, 207, 0.7);
+  }
+  
+
+  .resend-btn
+  {
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .header_email h2
+  {
+    margin-top: 2rem;
+  }
+
+  .otp-container
+  {
+    margin-left: -2rem;
+  }

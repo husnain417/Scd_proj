@@ -1,0 +1,43 @@
+.transactions_options
+{
+        display: flex;
+        flex-direction: row;
+        font-family: var(--font-family);
+        color: white;
+        height: 100vh;
+        overflow-y: hidden; 
+}
+
+.all_options
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3rem !important
+}
+
+.options_container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;}
+
+.option
+{
+    background-color:  #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: left;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.option:hover {
+    transform: translateY(-5px);
+  }

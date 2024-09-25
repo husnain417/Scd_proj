@@ -1,0 +1,87 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: -7rem !important;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-picture input
+  {
+    margin: 1rem;
+    max-width: 250px;
+  }
+
+  .profile-picture button
+  {
+    padding: 10px 25px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .profile-picture button:hover
+  {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+
+  .profile-picture input:hover
+  {
+    cursor: pointer;
+  }
+
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+  
+  .profile-picture p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .profile-picture p:hover {
+    color: #0056b3;
+  }
+  
+  .profile-name p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  
+  .change-password p {
+    font-size: 16px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .change-password p:hover {
+    color: #0056b3;
+  }

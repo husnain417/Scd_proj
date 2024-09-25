@@ -1,0 +1,47 @@
+.ben_account__opt
+{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.ben
+{
+    width: 90%;
+}
+
+.account_benef {
+    display: flex;
+    gap: 20rem;
+    justify-content: space-evenly;
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 44rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.account_benef:hover {
+    background-color: #555;
+    transform: scale(1.05);
+    height: 7rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.account_benef:hover .view-details {
+    display: inline-block;
+  }
+
+  .account_benef.highlighted {
+    border: 2px solid #007bff;
+    background-color: #444;
+    transition: all 10s ease-in-out; 
+}
+  
+  .account_benef:hover .delete-icon {
+    display: block;
+  }

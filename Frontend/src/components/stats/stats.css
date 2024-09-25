@@ -1,0 +1,22 @@
+/* stats.css */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+  
+  .stat-card {
+    background-color: #8e8e8e50; 
+    border-radius: 10px;
+    padding: 1rem 4rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .stat-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+  }
+  

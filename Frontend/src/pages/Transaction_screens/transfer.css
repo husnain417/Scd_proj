@@ -1,0 +1,85 @@
+.transfer {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    color: white;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.transfer__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: -3rem !important;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.transfer__form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.transfer__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 20px;
+    margin-left: -5rem;
+}
+
+.input__container {
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+.input__container .icon {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.transfer__button {
+    padding: 15px 0px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-bottom: -2rem;
+    margin-top: 1rem;
+    margin-left: -1rem;
+}
+
+.transfer__button:hover {
+    background-color: #007bff60;
+}
+
+.error_transfer {
+    color: red;
+    margin-top: 1rem;
+    width: 400px;
+    font-weight: bold;
+}
+
+.success_transfer {
+    color: rgb(74, 210, 74);
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 400px;
+}
+
+.h2_transfer {
+    margin-left: 2rem;
+}

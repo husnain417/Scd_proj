@@ -1,0 +1,154 @@
+.bank__login
+{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-family);
+    color: white;
+    padding-top: 2rem;
+    padding-left: 8rem;
+}
+
+/* DividerWithText.css */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .divider-line {
+    flex: 1;
+    max-width: 29%;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .divider-text {
+    margin: 0 10px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+
+  .bank__login-images
+  {
+    width: 50%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bank__login-content
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    width: 50%;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-left: 4rem; 
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    padding-right: 8rem !important  ;
+    border-top: 5px solid rgb(51, 187, 207);
+    border-bottom: 5px solid rgb(51, 187, 207);
+  }
+     
+  .sidepic-image {
+    width: 100%; 
+    z-index: 10;
+  }
+  
+
+  .header
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header h2
+  {
+    margin-top: 1rem;
+  }
+
+  .login-container
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .loginbtn
+  {
+    padding: 15px 180px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    max-width: 65%;
+    background-color: rgb(51, 187, 207) !important;
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .loginbtn:hover
+  {
+    background-color: rgb(51, 187, 207, 0.7);
+  }
+
+  .loginbtn_google {
+    display: flex;
+    align-items: center;  /* Center image and text vertically */
+    justify-content: center; /* Center image and text horizontally */
+    padding: 10px 130px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .google-logo {
+    margin-right: 10px;
+  }
+  
+  .loginbtn_google:hover {
+    background-color: rgb(255, 255, 255 , 0.7);
+  }
+
+  .signup
+  {
+    margin-left: 5rem;
+  }
+
+
+.signup a,
+.ForgotPass a {
+  color: #33bbcf;
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.signup a:hover,
+.ForgotPass a:hover {
+  text-decoration: underline;
+}
+
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-left: -15rem;
+}
+
+.success {
+  color: rgb(74, 210, 74);
+  font-weight: bold;
+}
