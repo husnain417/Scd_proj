@@ -26,7 +26,7 @@ import Update from './pages/Benficiary_render/Update';
 import Search from './pages/Benficiary_render/Search';
 import Changepass from './pages/profile/Changepass';
 import Profile from './pages/profile/Profile';
-import Landing from './landing/src/Landing';
+import Landing from './landingpage/src/Landing';
 
 const NotFound = () => <h1>404 - Page Not Found</h1>;
 
