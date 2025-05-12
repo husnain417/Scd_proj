@@ -1,0 +1,44 @@
+name: Build and Deploy to Minikube
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker to use Minikube's environment
+        run: |
+          echo "Configuring Docker to use Minikube's daemon..."
+          eval $(minikube docker-env)
+          
+      - name: Build Backend Docker image
+        run: |
+          cd app/backend
+          docker build -t yourusername/kubernetes-backend:latest .
+          
+      - name: Build Frontend Docker image
+        run: |
+          cd app/frontend
+          docker build -t yourusername/kubernetes-frontend:latest .
+          
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        
+      - name: Push Docker images to Docker Hub
+        run: |
+          docker push yourusername/kubernetes-backend:latest
+          docker push yourusername/kubernetes-frontend:latest
+          
+      - name: Deploy to Minikube
+        run: |
+          kubectl apply -f kubernetes/namespace.yaml
+          kubectl apply -f kubernetes/backend-deployment.yaml
+          kubectl apply -f kubernetes/backend-service.yaml
+          kubectl apply -f kubernetes/frontend-deployment.yaml
+          kubectl apply -f kubernetes/frontend-service.yaml
