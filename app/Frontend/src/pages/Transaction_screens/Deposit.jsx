@@ -4,6 +4,7 @@ import { faMoneyBillWave, faWallet } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import './deposit.css';
 import Menu_items from '../menu/Menu_items';
+import API_BASE_URL from '../../config';
 
 const Deposit = () => {
   const [selectedItem, setSelectedItem] = useState('transaction');
@@ -21,7 +22,7 @@ const Deposit = () => {
         const depositData = { accountNumber, amount };
     
         const response = await axios.post(
-          'http://localhost:5000/deposit', 
+          `${API_BASE_URL}/deposit`, 
           depositData,  
           {
             headers: {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './balance.css';
 import axios from 'axios';
 import Menu_items from '../menu/Menu_items';
+import API_BASE_URL from '../../config';
 
 const Balance = () => {
   const [selectedItem, setSelectedItem] = useState('accounts');
@@ -13,7 +14,7 @@ const Balance = () => {
     const fetchAccountBalances = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get('http://localhost:5000/accounts', {
+        const response = await axios.get(`${API_BASE_URL}/accounts`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

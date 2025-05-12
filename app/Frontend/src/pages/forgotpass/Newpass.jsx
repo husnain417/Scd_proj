@@ -5,6 +5,7 @@ import InputWithIcon from '../../components/InputWithIcon/InputWithIcon';
 import logo from '../../assets/logo.svg';
 import './forgotpass.css';
 import email_ver from '../../assets2/email_ver.png';
+import API_BASE_URL from '../../config';
 
 const Newpass = () => {
   const location = useLocation();
@@ -66,7 +67,7 @@ const Newpass = () => {
 
   const handleResend = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/user/verification/reSendOtp', { email });
+      const response = await axios.post(`${API_BASE_URL}/user/verification/reSendOtp`, { email });
       setResendMessage(response.data.message);
       setTimer(60);
       setResendAvailable(false);
@@ -82,7 +83,7 @@ const Newpass = () => {
     console.log('Using Reset Token:', resetToken);
 
     try {
-      const response = await axios.post('http://localhost:5000/user/password-reset', {
+      const response = await axios.post(`${API_BASE_URL}/user/password-reset`, {
         otp: otpString,
         newPassword,
       }, {

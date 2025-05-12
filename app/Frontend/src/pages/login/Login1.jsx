@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import google from '../../assets2/google.png';
 import sidepic from '../../assets2/Secure login 1.png';
 import axios from 'axios'; 
+import API_BASE_URL from '../../config';
 
 const Login1 = () => {
   const navigate = useNavigate(); 
@@ -19,7 +20,7 @@ const Login1 = () => {
       event.preventDefault(); 
     
       try {
-        const response = await axios.post('http://localhost:5000/login', {
+        const response = await axios.post(`${API_BASE_URL}/login`, {
           username,
           password,
         });

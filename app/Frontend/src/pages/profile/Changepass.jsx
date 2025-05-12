@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './change.css'
 import Menu_items from '../menu/Menu_items';
+import API_BASE_URL from '../../config';
 
 const Changepass = () => {
   const [selectedItem, setSelectedItem] = useState('profile');
@@ -14,7 +15,7 @@ const Changepass = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.post('http://localhost:5000/user/password-update', {
+      const response = await axios.post(`${API_BASE_URL}/user/password-update`, {
         oldPassword,
         newPassword,
       }, {

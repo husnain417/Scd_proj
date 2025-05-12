@@ -4,6 +4,7 @@ import './history.css';
 import Menu_items from '../menu/Menu_items';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import API_BASE_URL from '../../config';
 
 const History = () => {
   const [selectedItem, setSelectedItem] = useState('transaction');
@@ -14,7 +15,7 @@ const History = () => {
     const fetchTransactions = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get('http://localhost:5000/transactions', {
+        const response = await axios.get(`${API_BASE_URL}/transactions`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -32,7 +33,7 @@ const History = () => {
   const handleDownload = async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('http://localhost:5000/transaction/id/download', {
+      const response = await axios.get(`${API_BASE_URL}/transaction/id/download`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import emailpic from '../../assets2/email.png';
 import InputWithIcon from '../../components/InputWithIcon/InputWithIcon';
+import API_BASE_URL from '../../config';
 
 const Emailinput = () => {
   const navigate = useNavigate(); 
@@ -11,7 +12,7 @@ const Emailinput = () => {
 
   const handleContinue = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/user/password-forgot', { email });
+      const response = await axios.post(`${API_BASE_URL}/user/password-forgot`, { email });
 
       if (response.status === 200) {
         console.log('Reset Token:', response.data.resetToken); // Debugging

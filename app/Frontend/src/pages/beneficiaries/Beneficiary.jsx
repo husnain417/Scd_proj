@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faPlus, faEdit, faSearch } from '@fortawesome/free-solid-svg-icons'; 
 import { useNavigate, useLocation } from 'react-router-dom';
 import './ben.css'
+import API_BASE_URL from '../../config';
 
 const Modal = ({ beneficiary, onClose }) => {
   if (!beneficiary) return null;
@@ -38,7 +39,7 @@ const Beneficiary = () => {
     const fetchBeneficiaries = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get('http://localhost:5000/beneficiary-get', {
+        const response = await axios.get(`${API_BASE_URL}/beneficiary-get`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -78,7 +79,7 @@ const Beneficiary = () => {
       }
 
       const response = await axios.post(
-        'http://localhost:5000/beneficiary-delete',
+        `${API_BASE_URL}/beneficiary-delete`,
         { accountNumber: beneficiaryToDelete.beneficiaryAccountNumber },
         {
           headers: {

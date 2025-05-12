@@ -6,6 +6,7 @@ import axios from 'axios'; // Import axios
 import logo from '../../assets/logo.svg';
 import google from '../../assets2/google.png';
 import signup from '../../assets2/signup.png';
+import API_BASE_URL from '../../config';
 
 
 const Signup = () => {
@@ -29,7 +30,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/register', {
+      const response = await axios.post(`${API_BASE_URL}/register`, {
         username,
         email,
         password,

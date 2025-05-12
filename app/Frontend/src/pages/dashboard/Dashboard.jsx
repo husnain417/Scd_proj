@@ -15,6 +15,7 @@ import more from '../../assets2/dots.png'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
 import Menu_items from '../menu/Menu_items';
+import API_BASE_URL from '../../config';
 
 const stats_card = [
   { text: "Income", balance: "+ 944,280", icon: vector1 },
@@ -37,7 +38,7 @@ const Dashboard = () => {
     const fetchProfilePic = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get(`http://localhost:5000/user/profile-pic`, {
+        const response = await axios.get(`${API_BASE_URL}/user/profile-pic`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +52,7 @@ const Dashboard = () => {
     const fetchTransactions = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get(`http://localhost:5000/transactions`, {
+        const response = await axios.get(`${API_BASE_URL}/transactions`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -65,7 +66,7 @@ const Dashboard = () => {
     const fetchBeneficiaries = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get(`http://localhost:5000/beneficiary-get`, {
+        const response = await axios.get(`${API_BASE_URL}/beneficiary-get`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

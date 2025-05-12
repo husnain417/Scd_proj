@@ -5,6 +5,7 @@ import axios from 'axios';
 import './transfer.css';
 import Menu_items from '../menu/Menu_items';
 import { useLocation } from 'react-router-dom';
+import API_BASE_URL from '../../config';
 
 const Transfer = () => {
   const location = useLocation(); 
@@ -38,7 +39,7 @@ const Transfer = () => {
       };
   
       const response = await axios.post(
-        'http://localhost:5000/transfer', 
+        `${API_BASE_URL}/transfer`, 
         transferData,  
         {
           headers: {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Menu_items from '../menu/Menu_items';
+import API_BASE_URL from '../../config';
 
 const Update = () => {
   const [selectedItem, setSelectedItem] = useState('beneficiary');
@@ -27,7 +28,7 @@ const Update = () => {
     try {
       const token = localStorage.getItem('accessToken');
       const response = await axios.post(
-        'http://localhost:5000/beneficiary-update',
+        `${API_BASE_URL}/beneficiary-update`,
         { 
           accountNumber: formData.accountNumber, 
           newName: formData.newName 

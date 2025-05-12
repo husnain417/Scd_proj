@@ -3,6 +3,7 @@ import axios from 'axios';
 import Menu_items from '../menu/Menu_items';
 import { Link, useNavigate } from 'react-router-dom'; 
 import './profile.css'
+import API_BASE_URL from '../../config';
 
 const Profile = () => {
     const navigate = useNavigate(); 
@@ -16,7 +17,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem('accessToken');
         setName(localStorage.getItem('username'));
-        const response = await axios.get('http://localhost:5000/user/profile-pic', {
+        const response = await axios.get(`${API_BASE_URL}/user/profile-pic`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -49,7 +50,7 @@ const Profile = () => {
 
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.post('http://localhost:5000/user/upload-pic', formData, {
+      const response = await axios.post(`${API_BASE_URL}/user/upload-pic`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

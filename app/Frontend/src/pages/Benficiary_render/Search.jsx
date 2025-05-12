@@ -3,6 +3,7 @@ import axios from 'axios';
 import Menu_items from '../menu/Menu_items';
 import { useNavigate } from 'react-router-dom';
 import './search.css'
+import API_BASE_URL from '../../config';
 
 const Search = () => {
     const [selectedItem, setSelectedItem] = useState('beneficiary');
@@ -19,7 +20,7 @@ const Search = () => {
         try {
             const token = localStorage.getItem('accessToken');
             const response = await axios.post(
-                'http://localhost:5000/beneficiary-search',
+                `${API_BASE_URL}/beneficiary-search`,
                 { name: searchTerm },
                 {
                     headers: {

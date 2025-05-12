@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faPlus, faWallet } from '@fortawesome/free-solid-svg-icons'; 
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from '../../config';
 
 const Modal = ({ account, onClose }) => {
   if (!account) return null;
@@ -43,7 +44,7 @@ const UserAcc = () => {
     const fetchAccounts = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get(`http://localhost:5000/accounts`, {
+        const response = await axios.get(`${API_BASE_URL}/accounts`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -69,7 +70,7 @@ const UserAcc = () => {
       }
 
       const response = await axios.post(
-        'http://localhost:5000/closing',
+        `${API_BASE_URL}/closing`,
         { accountNumber: accountToDelete.accountNumber },
         {
           headers: {

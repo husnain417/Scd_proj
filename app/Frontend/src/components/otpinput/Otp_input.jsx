@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './otp_input.css';
+import API_BASE_URL from '../../config';
 
 const OtpInput = ({ email, onVerifySuccess }) => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -57,7 +58,7 @@ const OtpInput = ({ email, onVerifySuccess }) => {
 
   const handleResend = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/user/verification/reSendOtp', { email });
+      const response = await axios.post(`${API_BASE_URL}/user/verification/reSendOtp`, { email });
       setResendMessage(response.data.message);
       setTimer(60);
       setResendAvailable(false);
@@ -71,7 +72,7 @@ const OtpInput = ({ email, onVerifySuccess }) => {
   const handleVerifyOtp = async () => {
     const otpString = otp.join('');
     try {
-      const response = await axios.post('http://localhost:5000/user/verification/otpCheck', { email, otp: otpString });
+      const response = await axios.post(`${API_BASE_URL}/user/verification/otpCheck`, { email, otp: otpString });
       if (response.data.message === 'OTP verified successfully') {
         onVerifySuccess(); 
       }

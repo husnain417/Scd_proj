@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './create.css';
 import axios from 'axios';
 import Menu_items from '../menu/Menu_items';
+import API_BASE_URL from '../../config';
 
 const Create = () => {
   const [selectedItem, setSelectedItem] = useState('accounts');
@@ -32,7 +33,7 @@ const Create = () => {
     try {
       const token = localStorage.getItem('accessToken');
       const response = await axios.post(
-        'http://localhost:5000/accounts/create', 
+        `${API_BASE_URL}/accounts/create`, 
         formData,
         {
           headers: {
